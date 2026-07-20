@@ -1,0 +1,62 @@
+:root{
+  --ink:#13313d; --ink-2:#395966; --brand:#13657f; --brand-2:#2a8cad;
+  --sky-soft:#e6f1f7; --line:rgba(19,49,61,.10); --line-2:rgba(19,49,61,.06);
+  --bg:#f5f8fa; --warm:#f7f4ee; --shadow:0 18px 50px -24px rgba(19,49,61,.40);
+  --shadow-sm:0 8px 26px -16px rgba(19,49,61,.45); --r:18px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Pretendard","Pretendard Variable",-apple-system,sans-serif;
+  line-height:1.7; letter-spacing:-.01em;
+}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:900px; margin:0 auto; padding:0 24px}
+
+/* 상단 바 */
+.topbar{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#fff; padding:16px 0}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; max-width:1000px}
+.topbar a.home{font-weight:800; font-size:1.02rem}
+.topbar a.tel{font-size:.9rem; font-weight:700; background:rgba(255,255,255,.15); padding:8px 16px; border-radius:999px}
+
+/* 목록 */
+.blog-hero{padding:52px 0 30px; text-align:center}
+.blog-hero h1{font-size:clamp(1.7rem,4vw,2.3rem); font-weight:800; letter-spacing:-.02em}
+.blog-hero p{color:var(--ink-2); margin-top:10px}
+.list-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px; max-width:1000px; margin:0 auto 60px; padding:0 24px}
+@media(max-width:720px){ .list-grid{grid-template-columns:1fr} }
+.card{background:#fff; border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow-sm); border:1px solid var(--line-2); transition:transform .2s, box-shadow .2s}
+.card:hover{transform:translateY(-4px); box-shadow:var(--shadow)}
+.card .cov{height:150px; background:#dde9ef center/cover no-repeat}
+.card .ph{height:8px; background:linear-gradient(90deg,var(--brand),#8fc5df)}
+.card .body{padding:22px 24px 26px}
+.card .cat{font-size:.74rem; font-weight:800; letter-spacing:.05em; color:var(--brand-2)}
+.card h2{font-size:1.12rem; font-weight:800; margin:9px 0 8px; line-height:1.4}
+.card p{font-size:.9rem; color:var(--ink-2); margin:0}
+.card .date{font-size:.78rem; color:var(--ink-2); opacity:.75; margin-top:12px}
+.empty{max-width:1000px; margin:40px auto; padding:0 24px; color:var(--ink-2)}
+
+/* 상세 */
+.post-wrap{max-width:720px; margin:0 auto; padding:44px 24px 80px}
+.post-cat{font-size:.8rem; font-weight:800; letter-spacing:.05em; color:var(--brand-2)}
+.post-title{font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; line-height:1.35; margin:12px 0 8px}
+.post-date{font-size:.86rem; color:var(--ink-2); opacity:.8; margin-bottom:26px}
+.post-cover{width:100%; max-height:360px; object-fit:cover; border-radius:16px; margin-bottom:28px}
+.post-content{font-size:1.04rem; color:var(--ink-2)}
+.post-content h2{font-size:1.32rem; color:var(--ink); margin:34px 0 12px; font-weight:800}
+.post-content h3{font-size:1.14rem; color:var(--ink); margin:26px 0 10px; font-weight:800}
+.post-content h4{font-size:1.02rem; color:var(--ink); margin:20px 0 8px; font-weight:700}
+.post-content p{margin:0 0 15px}
+.post-content ul,.post-content ol{margin:0 0 18px; padding-left:22px}
+.post-content li{margin-bottom:6px}
+.post-content blockquote{margin:18px 0; padding:14px 20px; background:var(--sky-soft); border-left:4px solid var(--brand); border-radius:0 10px 10px 0; color:var(--ink)}
+.post-content hr{border:none; border-top:1px solid var(--line); margin:28px 0}
+.post-content figure{margin:20px 0}
+.post-content figure img{width:100%; border-radius:14px}
+.post-content figcaption{font-size:.82rem; color:var(--ink-2); text-align:center; margin-top:8px}
+.post-content .callout{display:flex; gap:12px; background:var(--warm); border-radius:12px; padding:16px 18px; margin:18px 0}
+.post-content strong{color:var(--ink)}
+.back{display:inline-flex; align-items:center; gap:6px; font-weight:700; color:var(--brand); margin-bottom:18px; font-size:.92rem}
+.disclaimer{margin-top:44px; padding-top:20px; border-top:1px solid var(--line); font-size:.82rem; color:var(--ink-2); line-height:1.7}
+.cta{margin-top:34px; text-align:center; background:linear-gradient(160deg,var(--brand),#0f5066); color:#fff; border-radius:16px; padding:28px}
+.cta a{display:inline-block; margin-top:12px; background:#fff; color:var(--brand); font-weight:800; padding:12px 22px; border-radius:999px}
